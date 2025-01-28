@@ -1,0 +1,53 @@
+load images/open-source-image-original.png open-source
+compress 50 open-source open-source-compress
+rgb-split open-source open-source-small-red open-source-small-green open-source-small-blue
+greyscale open-source open-source-grey
+sharpen open-source open-source-sharp
+sharpen open-source open-source-sharp-split split 50
+sepia open-source open-source-sepia
+brighten 20 open-source open-source-brighten
+brighten -20 open-source open-source-darken
+blur open-source open-source-blur
+blur open-source open-source-blur-split split 50
+horizontal-flip open-source open-source-horizontal-flip
+vertical-flip open-source open-source-vertical-flip
+intensity-component open-source open-source-intensity
+value-component open-source open-source-value
+luma-component open-source open-source-luma
+sepia open-source open-source-sepia-split split 50
+greyscale open-source open-source-grey-split split 50
+histogram open-source open-source-histogram
+levels-adjust 50 100 200 open-source open-source-levels
+levels-adjust 50 100 200 open-source open-source-levels-split split 50
+color-correct open-source open-source-color-correct
+color-correct open-source open-source-color-correct-split split 50
+rgb-combine open-source-combine open-source-small-red open-source-small-green open-source-small-blue
+dither open-source open-source-dither
+dither open-source open-source-dither-split split 50
+save images/open-source-small-red.png open-source-small-red
+save images/open-source-small-green.png open-source-small-green
+save images/open-source-small-blue.png open-source-small-blue
+save images/open-source-sharp.png open-source-sharp
+save images/open-source-sharp-split.png open-source-sharp-split
+save images/open-source-grey.png open-source-grey
+save images/open-source-grey-split.png open-source-grey-split
+save images/open-source-sepia-split.png open-source-sepia-split
+save images/open-source-sepia.png open-source-sepia
+save images/open-source-brighten.png open-source-brighten
+save images/open-source-blur.png open-source-blur
+save images/open-source-blur-split.png open-source-blur-split
+save images/open-source-horizontal-flip.png open-source-horizontal-flip
+save images/open-source-vertical-flip.png open-source-vertical-flip
+save images/open-source-intensity.png open-source-intensity
+save images/open-source-value.png open-source-value
+save images/open-source-darken.png open-source-darken
+save images/open-source-luma.png open-source-luma
+save images/open-source-combine-2.png open-source-combine
+save images/open-source-compress.png open-source-compress
+save images/open-source-histogram.png open-source-histogram
+save images/open-source-levels.png open-source-levels
+save images/open-source-levels-split.png open-source-levels-split
+save images/open-source-color-correct.png open-source-color-correct
+save images/open-source-color-correct-split.png open-source-color-correct-split
+save images/open-source-dither.png open-source-dither
+save images/open-source-dither-split.png open-source-dither-split

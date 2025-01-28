@@ -1,0 +1,48 @@
+Code Review
+
+Documentation Critique:
+The USEME file contains the necessary information for running the application. However, the README lacks information regarding ImageProcessorControllerV2 of the controller and JViewInterface, JFrameView of the model. It is essential to provide details on these components and their functionalities in the README. Although the code features JavaDocs in all necessary places with clear, concise, and easily comprehensible comments for all classes and interfaces.
+
+Design & Implementation Critique:
+The code demonstrates a well-thought-out design, adhering to SOLID principles and adopting a Model-View-Controller (MVC) structure. 
+
+Observations reveal that image operations are categorized and organized into different packages. While this segregation aligns with the nature of the operations, it might be unclear where to add a class for a new feature. The flexibility of interfaces appears to be sufficient, as evidenced by successfully implementing the Dither feature without requiring additional code or interface changes.
+
+The user interface (UI) is user-friendly and easy to understand. Meaningful error messages are displayed for edge cases. However, there were issues running the application on Windows systems, necessitating changes to the panel dimensions for responsiveness.
+
+
+Implementation Critique:
+The implementation is generally good, with comprehensive testing, including edge cases. However, there are notable issues in the GUI, such as difficulties loading greyscale PPM files and unexpected behavior in horizontal/vertical flip operations on greyscale images. Additionally, the compression functionality exhibits inconsistent behavior, impacting the user experience.
+
+Issues Encountered in GUI:
+
+1.Cannot Load Greyscale PPM File:
+  Steps: Load an image, apply greyscale, save as PPM file.
+  Issue: Unable to load the saved PPM file with the message "image should have 3 channels."
+
+2.Horizontal and Vertical Flip Operations:
+  Steps: Load an image, apply greyscale, then apply horizontal/vertical flip.
+  Expected: Greyscale image to be flipped horizontally/vertically.
+  Result: Uploaded color image is getting flipped instead of the greyscale image.
+
+3.Compression Issues:
+  Steps: Load, compress 10, compress 99 - compression works.
+  Issue: Loading the image again, compressing 70% - compression doesn't work. Histogram changes, but no difference is seen in the displayed image.
+
+Testing:
+The application has comprehensive test cases, including edge test cases, and is well-tested.
+
+
+Design/Code Strengths:
+The code exhibits strengths in following SOLID principles, adopting MVC, and providing a user-friendly UI with meaningful error messages. The inclusion of comprehensive test cases is also commendable.
+
+Design/Code Limitations:
+Despite its strengths, the code faces challenges in comprehensibility, especially in adding new features. GUI-related issues, such as loading greyscale PPM files and unexpected behavior in certain operations, need attention. Further documentation is required to guide developers on GUI-related components.
+
+Suggestions for Improvement:
+Addressing GUI-related issues (loading greyscale PPM files, flip operations, and compression inconsistencies), and updating the README with detailed information on specific components is necessary.
+Additionally, consider revisiting the approach to creating a new class for every supported operation in the application. While the codebase follows a modular structure, creating a separate class for each operation may feel a bit unnecessary, especially for simple operations where the code is straightforward and concise. Streamlining the structure in such cases can enhance code readability and maintainability.
+
+
+Conclusion:
+In conclusion, the code adheres to design principles and satisfies the 'Open for extension, closed for modification' condition of the SOLID principles. However, the implementation could be challenging to comprehend. GUI has minor bugs related to compression, horizontal and vertical flips on greyscale images, and loading greyscale PPM images. Despite this, the GUI is user-friendly with descriptive error messages. Documentation for GUI-related view interfaces and classes, as well as the controller to handle GUI-related operations, is missing in the README file.
